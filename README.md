@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img alt="podcastr" title="podcastr" src=".github/Logo.png" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+![Badge](https://img.shields.io/github/license/PedroHenry-Santos/Letmeask?style=flat&label=LICENSE&color=04d361&labelColor=000000)
+![Badge](https://img.shields.io/badge/TYPESCRIPT-v4.2.4-blue?style=flat&color=8257E5&labelColor=000000&logo=TypeScript)
+![Badge](https://img.shields.io/badge/REACT-v17.0.2-blue?style=flat&color=8257E5&labelColor=000000&logo=react)
+![Badge](https://img.shields.io/badge/NEXT.JS-v10.2.2-blue?style=flat&logo=Next.js&color=8257E5&labelColor=000000)
+![Badge](https://img.shields.io/badge/SASS-v1.34.0-blue?style=flat&color=8257E5&labelColor=000000&logo=Sass)
 
-### `yarn start`
+<div align="center">
+  <img src="" with="800" height="400"/>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# :page_with_curl: Índice
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [Sobre o projeto](#interrobang-sobre-o-projeto)
+  - [Tecnologias utilizadas](#-tecnologias-utilizadas)
+* [Executando a aplicação](#rocket-executando-a-aplicação)
+  - [Executando a aplicação](#pencil2-Executando-a-aplicação)
+* [Para contribuir](#mailbox-para-contribuir)
+  - [Histórico de atualizações](#clock10-histórico-de-atualizações)
 
-### `yarn test`
+# :interrobang: Sobre o projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Projeto realizado durante a NLW#6 realizado pela Rocketseat. Foi desenvolvido um app para onde é possível realizar interação com usuários através de perguntas.
+## 🧑‍💻 Tecnologias utilizadas
 
-### `yarn build`
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+# :rocket: Executando a aplicação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Primeiramente clone o repositório para sua maquina ou faça o 'download' em formato ZIP e descompacte. Para realizar a clonagem do repositório utilize o comando:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    git clone git@github.com:PedroHenry-Santos/Letmeask.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Após basta instalar as dependência utilizando o gerenciador de pacote de sua preferência. Conforme abaixo:
 
-### `yarn eject`
+    yarn install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+E utilizar o comando:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    yarn start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
+# :mailbox: Para contribuir
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Caso queira ajudar a implementar novas funcionalidade nessa aplicação, poderá seguir o **roteiro de funcionalidades** a seguir. Ou também poderá propor sua própria funcionalidade.<br/><br/>
+Para isso basta seguir o [roteiro](https://github.com/PedroHenry-Santos/Letmeask/blob/main/CONTRIBUTING.md) em CONTRIBUTING.
 
-## Learn More
+## :heavy_check_mark: Roteiro de funcionalidade da aplicação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.com/PedroHenry-Santos/Letmeask/projects/1).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   [ ] Ainda em desenvolvimento...
+
+## :clock10: Histórico de atualizações
+
+Para saber sobre as [versões](https://github.com/PedroHenry-Santos/Letmeask/releases) deste código consulte o CHANGELOG detalhado.
+
+# :lock: Licença
+
+[MIT License](https://github.com/PedroHenry-Santos/Letmeask/blob/main/LICENCE.md) ® [Pedro Santos](https://github.com/PedroHenry-Santos)
