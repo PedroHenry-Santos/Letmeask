@@ -1,7 +1,10 @@
+import { FormEvent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
+import { database } from '../services/firebase';
 
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
@@ -13,12 +16,44 @@ export const Home = () => {
     const history = useHistory();
     const { user, signInWithGoogle } = useAuth();
 
+    const [roomCode, setRoomCode] = useState('');
+
+    const notify = () =>
+        toast.error('Look at me, I have brand styles.', {
+            style: {
+                border: '1px solid #ea4335',
+                padding: '20px',
+                color: '#737380'
+            },
+            iconTheme: {
+                primary: '#ea4335',
+                secondary: '#f8f8f8'
+            }
+        });
+
     const handleCreateRoom = async () => {
         if (!user) {
             await signInWithGoogle();
         }
 
         history.push('/room/new');
+    };
+
+    const handleJoinRoom = async (event: FormEvent) => {
+        event.preventDefault();
+
+        if (roomCode.trim() === '') {
+            return;
+        }
+
+        const roomRef = await database.ref(`rooms/${roomCode}`).get();
+
+        if (!roomRef.exists()) {
+            notify();
+            return;
+        }
+
+        history.push(`room/${roomCode}`);
     };
 
     return (
@@ -42,11 +77,14 @@ export const Home = () => {
                         <img src={googleIconImg} alt="Logo do Google" />
                         Crie sua sala com o Google
                     </button>
+                    <Toaster />
                     <div className="separator">ou entre em uma sala</div>
-                    <form>
+                    <form onSubmit={handleJoinRoom}>
                         <input
                             type="text"
                             placeholder="Digite o código da sala"
+                            onChange={event => setRoomCode(event.target.value)}
+                            value={roomCode}
                         />
                         <Button type="submit">Entrar na sala</Button>
                     </form>
