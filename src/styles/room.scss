@@ -13,6 +13,15 @@
             > img {
                 max-height: 45px;
             }
+
+            > div {
+                display: flex;
+                gap: 16px;
+
+                button {
+                    height: 40px
+                }
+            }
         }
     }
 
@@ -96,5 +105,86 @@
                 }
             }
         }
+
+        .question-list {
+            margin-top: 32px;
+        }
+
+
+    }
+}
+
+.ReactModal__Overlay {
+
+    .ReactModal__Content {
+
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 50px;
+
+            > svg {
+                height: 48px;
+                width: 48px;
+
+                path {
+                    stroke: #E73F5D;
+                }
+            }
+
+            h2 {
+                padding-top: 15px;
+                font-size: 24px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                line-height: 34px;
+                color: #29292E;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                line-height: 26px;
+                text-align: center;
+                color: #737380;
+                padding: 10px;
+            }
+
+            > div {
+                gap: 10px;
+                display: flex;
+
+                button {
+                    height: 50px;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    padding: 0 32px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    border: 0;
+                    transition: filter 0.2s;
+
+                    &:hover {
+                        filter: brightness(0.9);
+                    }
+                }
+
+                .cancel {
+                    background: #DBDCDD;
+                    color: #737380;
+                }
+
+                .confirm {
+                    background: #E73F5D;
+                    color: #FEFEFE;
+                }
+            }
+        }
+
     }
 }

@@ -18,17 +18,27 @@ export const Home = () => {
 
     const [roomCode, setRoomCode] = useState('');
 
-    const notify = () =>
-        toast.error('Look at me, I have brand styles.', {
+    const notifyRoomNotExist = () =>
+        toast.error('Não existe a sala informada!', {
             style: {
-                border: '1px solid #ea4335',
+                border: '1px solid #E73F5D',
                 padding: '20px',
                 color: '#737380'
             },
             iconTheme: {
-                primary: '#ea4335',
+                primary: '#E73F5D',
                 secondary: '#f8f8f8'
             }
+        });
+
+    const notifyRoomClosed = () =>
+        toast.error('A sala informada se encontra fechada!', {
+            style: {
+                border: '1px solid #ffcf33',
+                padding: '20px',
+                color: '#737380'
+            },
+            icon: '⚠️'
         });
 
     const handleCreateRoom = async () => {
@@ -49,7 +59,12 @@ export const Home = () => {
         const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
         if (!roomRef.exists()) {
-            notify();
+            notifyRoomNotExist();
+            return;
+        }
+
+        if (roomRef.val().endedAt) {
+            notifyRoomClosed();
             return;
         }
 

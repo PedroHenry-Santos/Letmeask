@@ -7,7 +7,7 @@
 ![Badge](https://img.shields.io/github/license/PedroHenry-Santos/Letmeask?style=flat&label=LICENSE&color=04d361&labelColor=000000)
 ![Badge](https://img.shields.io/badge/TYPESCRIPT-v4.2.4-blue?style=flat&color=8257E5&labelColor=000000&logo=TypeScript)
 ![Badge](https://img.shields.io/badge/REACT-v17.0.2-blue?style=flat&color=8257E5&labelColor=000000&logo=react)
-![Badge](https://img.shields.io/badge/NEXT.JS-v10.2.2-blue?style=flat&logo=Next.js&color=8257E5&labelColor=000000)
+![Badge](https://img.shields.io/badge/Firebase-v8.6.8-blue?style=flat&logo=Firebase&color=8257E5&labelColor=000000)
 ![Badge](https://img.shields.io/badge/SASS-v1.34.0-blue?style=flat&color=8257E5&labelColor=000000&logo=Sass)
 
 <div align="center">
@@ -30,6 +30,8 @@ Projeto realizado durante a NLW#6 realizado pela Rocketseat. Foi desenvolvido um
 
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Sass](https://sass-lang.com/)
+- [Firebase](https://firebase.google.com/)
 # :rocket: Executando a aplicação
 
 Primeiramente clone o repositório para sua maquina ou faça o 'download' em formato ZIP e descompacte. Para realizar a clonagem do repositório utilize o comando:
@@ -54,7 +56,18 @@ Para isso basta seguir o [roteiro](https://github.com/PedroHenry-Santos/Letmeask
 
 Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.com/PedroHenry-Santos/Letmeask/projects/1).
 
--   [ ] Ainda em desenvolvimento...
+- [x] Autenticação através de conta Google utilizando o Firebase.
+- [x] Criar sala de perguntas individuais.
+- [x] Adicionar novas perguntas na sala.
+- [x] Pagina do administrador das perguntas.
+- [x] Like nas perguntas.
+- [x] Remover perguntas.
+- [x] Encerrar sala.
+- [x] Impedir que entre em uma sala fechada.
+- [x] Toast para notificação.
+- [x] Modal de confirmação para exclusão e encerramento da chamada.
+- [ ] Responsividade.
+- [ ] Temas de exibição (Light, Dark).
 
 ## :clock10: Histórico de atualizações
 
