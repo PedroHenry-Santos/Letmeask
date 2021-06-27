@@ -1,5 +1,5 @@
 import { useState, FormEvent, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
 import { ThemeContext } from 'styled-components';
@@ -19,9 +19,10 @@ interface RoomParams {
 }
 
 export const Room = () => {
-    const { user } = useAuth();
+    const { user, signInWithGoogle } = useAuth();
     const params = useParams<RoomParams>();
     const roomId = params.id;
+    const history = useHistory();
     const { questions, title } = useRoom(roomId);
     const { colors } = useContext(ThemeContext);
 
@@ -37,6 +38,14 @@ export const Room = () => {
             },
             icon: '⚠️'
         });
+
+    const handleCreateRoom = async () => {
+        if (!user) {
+            await signInWithGoogle();
+        }
+
+        history.push('/room/new');
+    };
 
     const handleSendQuestion = async (event: FormEvent) => {
         event.preventDefault();
@@ -116,7 +125,10 @@ export const Room = () => {
                         ) : (
                             <span>
                                 Para enviar uma pergunta,{' '}
-                                <button>faça seu login</button>.{' '}
+                                <button onClick={handleCreateRoom}>
+                                    faça seu login
+                                </button>
+                                .{' '}
                             </span>
                         )}
                         <Button type="submit" disabled={!user}>
