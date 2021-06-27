@@ -131,6 +131,35 @@ export const RoomStyle = styled.div`
 
         .question-list {
             margin-top: 2.2rem;
+
+            > .emptyContent {
+                padding: 5rem 0 0 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 10rem;
+                    height: 10rem;
+                }
+
+                h3 {
+                    padding: 1rem 0;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    font-family: 'Poppins', sans-serif;
+                    color: ${props => props.theme.colors.mainText};
+                }
+
+                p {
+                    width: 20rem;
+                    text-align: center;
+                    font-size: 0.9rem;
+                    line-height: 1.4rem;
+                    color: ${props => props.theme.colors.secondaryText};
+                }
+            }
         }
     }
 `;
