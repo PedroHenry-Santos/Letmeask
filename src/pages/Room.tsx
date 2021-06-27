@@ -32,6 +32,7 @@ export const Room = () => {
             style: {
                 border: `1px solid ${colors.alert}`,
                 padding: '20px',
+                background: `${colors.modalBackground}`,
                 color: colors.secondaryText
             },
             icon: '⚠️'

@@ -25,6 +25,7 @@ export const Home = () => {
             style: {
                 border: `1px solid ${colors.error}`,
                 padding: '20px',
+                background: `${colors.modalBackground}`,
                 color: colors.secondaryText
             },
             iconTheme: {
@@ -38,6 +39,7 @@ export const Home = () => {
             style: {
                 border: `1px solid ${colors.alert}`,
                 padding: '20px',
+                background: `${colors.modalBackground}`,
                 color: colors.secondaryText
             },
             icon: '⚠️'

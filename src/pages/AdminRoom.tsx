@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import Modal from 'react-modal';
+import { ThemeContext } from 'styled-components';
 
 import { Questions } from '../components/Questions';
 import { useRoom } from '../hooks/useRoom';
@@ -9,10 +10,6 @@ import { Button } from '../components/Button';
 import { database } from '../services/firebase';
 import { LogoIcon } from '../components/LogoIcon';
 import { SwitchTheme } from '../components/SwithTheme';
-
-import deleteImg from '../assets/images/delete.svg';
-import checkImg from '../assets/images/check.svg';
-import answerImg from '../assets/images/answer.svg';
 
 import { RoomStyle, ModalStyle } from '../assets/styles/room.styles';
 
@@ -24,6 +21,7 @@ export const AdminRoom = () => {
     const params = useParams<RoomParams>();
     const roomId = params.id;
     const { questions, title } = useRoom(roomId);
+    const { colors } = useContext(ThemeContext);
     const history = useHistory();
 
     const [modalIsOpenDeleteQuestion, setIsOpenDeleteQuestion] =
@@ -38,7 +36,7 @@ export const AdminRoom = () => {
             bottom: 'auto',
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
-            backgroundColor: '#F8F8F8'
+            backgroundColor: `${colors.modalBackground}`
         },
         overlay: {
             top: 0,

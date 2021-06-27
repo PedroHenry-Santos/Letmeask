@@ -18,7 +18,7 @@ export default {
         mainButton: '#298BF9',
         confirmationButton: '#06D6A0',
         alertButton: '#EF4767',
-        disabledButton: '#DBCDDD',
+        disabledButton: '#DBDCDD',
 
         alert: '#ffd166',
         notify: '#298BF9',
