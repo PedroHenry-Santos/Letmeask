@@ -8,7 +8,7 @@
 ![Badge](https://img.shields.io/badge/TYPESCRIPT-v4.2.4-blue?style=flat&color=8257E5&labelColor=000000&logo=TypeScript)
 ![Badge](https://img.shields.io/badge/REACT-v17.0.2-blue?style=flat&color=8257E5&labelColor=000000&logo=react)
 ![Badge](https://img.shields.io/badge/Firebase-v8.6.8-blue?style=flat&logo=Firebase&color=8257E5&labelColor=000000)
-![Badge](https://img.shields.io/badge/SASS-v1.34.0-blue?style=flat&color=8257E5&labelColor=000000&logo=Sass)
+![Badge](https://img.shields.io/badge/STYLED--COMPONENTS-v5.3.0-blue?style=flat&logo=styled-components&labelColor=000000&color=8257E5)
 
 <div align="center">
   <img src=".github/demo.gif" with="800" height="400"/>
@@ -30,7 +30,7 @@ Projeto realizado durante a NLW#6 realizado pela Rocketseat. Foi desenvolvido um
 
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Sass](https://sass-lang.com/)
+- [Styled-components](https://styled-components.com/)
 - [Firebase](https://firebase.google.com/)
 # :rocket: Executando a aplicação
 
@@ -70,8 +70,9 @@ Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.
 - [x] Função de marcar pergunta respondida.
 - [x] Toast para notificação.
 - [x] Modal de confirmação para exclusão e encerramento da chamada.
+- [x] Temas de exibição (Light, Dark).
 - [ ] Responsividade.
-- [ ] Temas de exibição (Light, Dark).
+
 
 ## :clock10: Histórico de atualizações
 
