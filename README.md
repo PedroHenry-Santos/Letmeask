@@ -4,11 +4,11 @@
 
 
 
-![Badge](https://img.shields.io/github/license/PedroHenry-Santos/Letmeask?style=flat&label=LICENSE&color=04d361&labelColor=000000)
-![Badge](https://img.shields.io/badge/TYPESCRIPT-v4.2.4-blue?style=flat&color=8257E5&labelColor=000000&logo=TypeScript)
-![Badge](https://img.shields.io/badge/REACT-v17.0.2-blue?style=flat&color=8257E5&labelColor=000000&logo=react)
-![Badge](https://img.shields.io/badge/Firebase-v8.6.8-blue?style=flat&logo=Firebase&color=8257E5&labelColor=000000)
-![Badge](https://img.shields.io/badge/STYLED--COMPONENTS-v5.3.0-blue?style=flat&logo=styled-components&labelColor=000000&color=8257E5)
+![Badge](https://img.shields.io/github/license/PedroHenry-Santos/Letmeask?style=flat&label=LICENSE&color=FFC300&labelColor=000000)
+![Badge](https://img.shields.io/badge/TYPESCRIPT-v4.2.4-blue?style=flat&color=298BF9&labelColor=000000&logo=TypeScript)
+![Badge](https://img.shields.io/badge/REACT-v17.0.2-blue?style=flat&color=298BF9&labelColor=000000&logo=react)
+![Badge](https://img.shields.io/badge/Firebase-v8.6.8-blue?style=flat&logo=Firebase&color=298BF9&labelColor=000000)
+![Badge](https://img.shields.io/badge/STYLED--COMPONENTS-v5.3.0-blue?style=flat&logo=styled-components&labelColor=000000&color=298BF9)
 
 <div align="center">
   <img src=".github/demo.gif" with="800" height="400"/>
