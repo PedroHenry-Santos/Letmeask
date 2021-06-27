@@ -47,6 +47,8 @@ E utilizar o comando:
     yarn start
 
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
+
+Lembrando que será necessário criar uma conta no [Firebase](https://firebase.google.com/) e um projeto para disponibilizar um Realtime Database.
 # :mailbox: Para contribuir
 
 Caso queira ajudar a implementar novas funcionalidade nessa aplicação, poderá seguir o **roteiro de funcionalidades** a seguir. Ou também poderá propor sua própria funcionalidade.<br/><br/>
