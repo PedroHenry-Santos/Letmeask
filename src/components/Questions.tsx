@@ -9,15 +9,23 @@ interface QuestionsProps {
         avatar: string;
     };
     children?: ReactNode;
+    isAnswered?: boolean;
+    isHighLighted?: boolean;
 }
 
 export const Questions: React.FC<QuestionsProps> = ({
     content,
     author,
+    isAnswered = false,
+    isHighLighted = false,
     children
 }) => {
     return (
-        <div className="question">
+        <div
+            className={`question ${isAnswered ? 'answered' : ''} ${
+                isHighLighted && !isAnswered ? 'highlighted' : ''
+            } `}
+        >
             <p>{content}</p>
             <footer>
                 <div className="user-info">
