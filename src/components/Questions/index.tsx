@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import '../styles/questions.scss';
+import { QuestionStyle } from './styles';
 
 interface QuestionsProps {
     content: string;
@@ -21,7 +21,7 @@ export const Questions: React.FC<QuestionsProps> = ({
     children
 }) => {
     return (
-        <div
+        <QuestionStyle
             className={`question ${isAnswered ? 'answered' : ''} ${
                 isHighLighted && !isAnswered ? 'highlighted' : ''
             } `}
@@ -34,6 +34,6 @@ export const Questions: React.FC<QuestionsProps> = ({
                 </div>
                 <div>{children}</div>
             </footer>
-        </div>
+        </QuestionStyle>
     );
 };

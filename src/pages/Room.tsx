@@ -1,17 +1,18 @@
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
+import { ThemeContext } from 'styled-components';
 import { RoomCode } from '../components/RunCode';
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
 
-import logo from '../assets/images/logo.svg';
-
-import '../styles/room.scss';
+import { RoomStyle } from '../assets/styles/room.styles';
 import { Questions } from '../components/Questions';
 import { useRoom } from '../hooks/useRoom';
+import { LogoIcon } from '../components/LogoIcon';
+import { SwitchTheme } from '../components/SwithTheme';
 
 interface RoomParams {
     id: string;
@@ -22,19 +23,16 @@ export const Room = () => {
     const params = useParams<RoomParams>();
     const roomId = params.id;
     const { questions, title } = useRoom(roomId);
+    const { colors } = useContext(ThemeContext);
 
     const [newQuestion, setNewQuestion] = useState('');
 
     const notify = () =>
         toast.error('Você não está conectado em sum conta Google!.', {
             style: {
-                border: '1px solid #ffcf33',
+                border: `1px solid ${colors.alert}`,
                 padding: '20px',
-                color: '#737380'
-            },
-            iconTheme: {
-                primary: '#ffcf33',
-                secondary: '#f8f8f8'
+                color: colors.secondaryText
             },
             icon: '⚠️'
         });
@@ -70,7 +68,6 @@ export const Room = () => {
         likeId: string | undefined
     ) => {
         if (likeId) {
-            console.log(likeId);
             await database
                 .ref(`rooms/${roomId}/questions/${questionId}/likes/${likeId}`)
                 .remove();
@@ -80,25 +77,27 @@ export const Room = () => {
                 .push({
                     authorId: user?.id
                 });
-            console.log(likeId);
         }
     };
 
     return (
-        <div id="page-room">
+        <RoomStyle>
             <header>
                 <div className="content">
-                    <img src={logo} alt="<Letmeask" />
+                    <LogoIcon />
                     <RoomCode code={roomId} />
                 </div>
             </header>
 
             <main>
                 <div className="room-title">
-                    <h1>Sala {title}</h1>
-                    {questions.length > 0 && (
-                        <span>{questions.length} pergunta(s)</span>
-                    )}
+                    <div>
+                        <h1>Sala {title}</h1>
+                        {questions.length > 0 && (
+                            <span>{questions.length} pergunta(s)</span>
+                        )}
+                    </div>
+                    <SwitchTheme />
                 </div>
 
                 <form onSubmit={handleSendQuestion}>
@@ -174,6 +173,6 @@ export const Room = () => {
                     })}
                 </div>
             </main>
-        </div>
+        </RoomStyle>
     );
 };

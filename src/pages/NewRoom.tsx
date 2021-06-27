@@ -3,13 +3,13 @@ import { Link, useHistory } from 'react-router-dom';
 
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
-
+import { LogoIcon } from '../components/LogoIcon';
+import { SwitchTheme } from '../components/SwithTheme';
 import { database } from '../services/firebase';
 
 import illustrationImg from '../assets/images/illustration.svg';
-import logoImg from '../assets/images/logo.svg';
 
-import '../styles/auth.scss';
+import { AuthStyle } from '../assets/styles/auth.styles';
 
 export const NewRoom = () => {
     const { user } = useAuth();
@@ -35,7 +35,7 @@ export const NewRoom = () => {
     };
 
     return (
-        <div id="page-auth">
+        <AuthStyle>
             <aside>
                 <img
                     src={illustrationImg}
@@ -46,7 +46,11 @@ export const NewRoom = () => {
             </aside>
             <main>
                 <div className="main-content">
-                    <img src={logoImg} alt="Letmeask" />
+                    <LogoIcon />
+                    <div>
+                        <span>Trocar tema</span>
+                        <SwitchTheme />
+                    </div>
                     <h2>Criar uma nova sala</h2>
                     <form onSubmit={handleCreateRoom}>
                         <input
@@ -63,6 +67,6 @@ export const NewRoom = () => {
                     </p>
                 </div>
             </main>
-        </div>
+        </AuthStyle>
     );
 };

@@ -1,42 +1,44 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
+import { ThemeContext } from 'styled-components';
 
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
+import { AuthStyle } from '../assets/styles/auth.styles';
+import { GoogleIcon } from '../components/GoogleIcon';
+import { LogoIcon } from '../components/LogoIcon';
 
 import illustrationImg from '../assets/images/illustration.svg';
-import logoImg from '../assets/images/logo.svg';
-import googleIconImg from '../assets/images/google-icon.svg';
-
-import '../styles/auth.scss';
+import { SwitchTheme } from '../components/SwithTheme';
 
 export const Home = () => {
     const history = useHistory();
     const { user, signInWithGoogle } = useAuth();
+    const { colors } = useContext(ThemeContext);
 
     const [roomCode, setRoomCode] = useState('');
 
     const notifyRoomNotExist = () =>
         toast.error('Não existe a sala informada!', {
             style: {
-                border: '1px solid #E73F5D',
+                border: `1px solid ${colors.error}`,
                 padding: '20px',
-                color: '#737380'
+                color: colors.secondaryText
             },
             iconTheme: {
-                primary: '#E73F5D',
-                secondary: '#f8f8f8'
+                primary: colors.error,
+                secondary: colors.whiteText
             }
         });
 
     const notifyRoomClosed = () =>
         toast.error('A sala informada se encontra fechada!', {
             style: {
-                border: '1px solid #ffcf33',
+                border: `1px solid ${colors.alert}`,
                 padding: '20px',
-                color: '#737380'
+                color: colors.secondaryText
             },
             icon: '⚠️'
         });
@@ -72,7 +74,7 @@ export const Home = () => {
     };
 
     return (
-        <div id="page-auth">
+        <AuthStyle>
             <aside>
                 <img
                     src={illustrationImg}
@@ -83,15 +85,21 @@ export const Home = () => {
             </aside>
             <main>
                 <div className="main-content">
-                    <img src={logoImg} alt="Letmeask" />
+                    <LogoIcon />
+                    <div>
+                        <span>Trocar tema</span>
+                        <SwitchTheme />
+                    </div>
+
                     <button
                         className="create-room"
                         type="button"
                         onClick={handleCreateRoom}
                     >
-                        <img src={googleIconImg} alt="Logo do Google" />
+                        <GoogleIcon />
                         Crie sua sala com o Google
                     </button>
+
                     <Toaster />
                     <div className="separator">ou entre em uma sala</div>
                     <form onSubmit={handleJoinRoom}>
@@ -105,6 +113,6 @@ export const Home = () => {
                     </form>
                 </div>
             </main>
-        </div>
+        </AuthStyle>
     );
 };
