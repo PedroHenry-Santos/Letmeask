@@ -11,7 +11,7 @@
 ![Badge](https://img.shields.io/badge/SASS-v1.34.0-blue?style=flat&color=8257E5&labelColor=000000&logo=Sass)
 
 <div align="center">
-  <img src="" with="800" height="400"/>
+  <img src=".github/demo.gif" with="800" height="400"/>
 </div>
 
 # :page_with_curl: Índice
@@ -64,6 +64,8 @@ Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.
 - [x] Remover perguntas.
 - [x] Encerrar sala.
 - [x] Impedir que entre em uma sala fechada.
+- [x] Função de dar destaque a uma pergunta.
+- [x] Função de marcar pergunta respondida.
 - [x] Toast para notificação.
 - [x] Modal de confirmação para exclusão e encerramento da chamada.
 - [ ] Responsividade.
