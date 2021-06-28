@@ -1,17 +1,19 @@
-import { ReactNode } from 'react';
+import { HTMLMotionProps, motion } from 'framer-motion';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import { QuestionStyle } from './styles';
 
-interface QuestionsProps {
-    content: string;
-    author: {
-        name: string;
-        avatar: string;
+type QuestionsProps = HTMLMotionProps<'div'> &
+    ButtonHTMLAttributes<HTMLButtonElement> & {
+        content: string;
+        author: {
+            name: string;
+            avatar: string;
+        };
+        children?: ReactNode;
+        isAnswered?: boolean;
+        isHighLighted?: boolean;
     };
-    children?: ReactNode;
-    isAnswered?: boolean;
-    isHighLighted?: boolean;
-}
 
 export const Questions: React.FC<QuestionsProps> = ({
     content,
@@ -22,6 +24,14 @@ export const Questions: React.FC<QuestionsProps> = ({
 }) => {
     return (
         <QuestionStyle
+            as={motion.div}
+            transition={{ delay: 0.3, duration: 1 }}
+            variants={{
+                show: { opacity: 1, y: '0' },
+                hidden: { opacity: 0, y: '50%' }
+            }}
+            initial="hidden"
+            animate="show"
             className={`question ${isAnswered ? 'answered' : ''} ${
                 isHighLighted && !isAnswered ? 'highlighted' : ''
             } `}

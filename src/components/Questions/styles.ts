@@ -64,39 +64,39 @@ export const QuestionStyle = styled.div`
                 align-items: center;
             }
         }
+    }
+`;
 
-        button {
-            border: 0;
-            background: transparent;
-            cursor: pointer;
-            transition: filter 0.2s;
+export const ButtonIcon = styled.button`
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: filter 0.2s;
 
-            &.like-button {
-                display: flex;
-                align-items: flex-end;
-                color: ${props => props.theme.colors.secondaryText};
-                gap: 0.6rem;
+    &.like-button {
+        display: flex;
+        align-items: flex-end;
+        color: ${props => props.theme.colors.secondaryText};
+        gap: 0.6rem;
 
-                &.liked {
-                    color: ${props => props.theme.colors.primary};
+        &.liked {
+            color: ${props => props.theme.colors.primary};
 
-                    svg path {
-                        stroke: ${props => props.theme.colors.primary};
-                    }
-                }
+            svg path {
+                stroke: ${props => props.theme.colors.primary};
             }
+        }
+    }
 
-            &:hover {
-                color: ${props => props.theme.colors.mainButtonHover};
+    &:hover {
+        color: ${props => props.theme.colors.mainButtonHover};
 
-                svg path {
-                    stroke: ${props => props.theme.colors.mainButtonHover};
-                }
+        svg path {
+            stroke: ${props => props.theme.colors.mainButtonHover};
+        }
 
-                svg circle {
-                    stroke: ${props => props.theme.colors.primary};
-                }
-            }
+        svg circle {
+            stroke: ${props => props.theme.colors.primary};
         }
     }
 `;

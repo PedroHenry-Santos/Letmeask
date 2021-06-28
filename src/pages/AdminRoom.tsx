@@ -3,6 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import Modal from 'react-modal';
 import { ThemeContext } from 'styled-components';
 
+import { motion } from 'framer-motion';
 import { Questions } from '../components/Questions';
 import { useRoom } from '../hooks/useRoom';
 import { RoomCode } from '../components/RunCode';
@@ -14,6 +15,7 @@ import { SwitchTheme } from '../components/SwithTheme';
 import Apresentation from '../assets/images/apresentation.svg';
 
 import { RoomStyle, ModalStyle } from '../assets/styles/room.styles';
+import { ButtonIcon } from '../components/Questions/styles';
 
 interface RoomParams {
     id: string;
@@ -184,7 +186,10 @@ export const AdminRoom = () => {
                                 >
                                     {!question.isAnswered && (
                                         <>
-                                            <button
+                                            <ButtonIcon
+                                                as={motion.button}
+                                                whileHover={{ scale: 1.1 }}
+                                                whileTap={{ scale: 0.9 }}
                                                 type="button"
                                                 onClick={() =>
                                                     handleQuestionAsAnswer(
@@ -216,8 +221,11 @@ export const AdminRoom = () => {
                                                         strokeLinejoin="round"
                                                     />
                                                 </svg>
-                                            </button>
-                                            <button
+                                            </ButtonIcon>
+                                            <ButtonIcon
+                                                as={motion.button}
+                                                whileHover={{ scale: 1.1 }}
+                                                whileTap={{ scale: 0.9 }}
                                                 className={`like-button ${
                                                     question.isHighLighted
                                                         ? 'liked'
@@ -247,10 +255,13 @@ export const AdminRoom = () => {
                                                         strokeLinejoin="round"
                                                     />
                                                 </svg>
-                                            </button>
+                                            </ButtonIcon>
                                         </>
                                     )}
-                                    <button
+                                    <ButtonIcon
+                                        as={motion.button}
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
                                         type="button"
                                         onClick={openModalDeleteQuestion}
                                     >
@@ -276,7 +287,7 @@ export const AdminRoom = () => {
                                                 strokeLinejoin="round"
                                             />
                                         </svg>
-                                    </button>
+                                    </ButtonIcon>
 
                                     <Modal
                                         isOpen={modalIsOpenDeleteQuestion}

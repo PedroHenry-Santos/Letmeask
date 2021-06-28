@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
 import { ThemeContext } from 'styled-components';
+import { motion } from 'framer-motion';
 import { RoomCode } from '../components/RunCode';
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
@@ -15,6 +16,7 @@ import { LogoIcon } from '../components/LogoIcon';
 import { SwitchTheme } from '../components/SwithTheme';
 
 import Apresentation from '../assets/images/apresentation.svg';
+import { ButtonIcon } from '../components/Questions/styles';
 
 interface RoomParams {
     id: string;
@@ -149,7 +151,10 @@ export const Room = () => {
                                     isHighLighted={question.isHighLighted}
                                 >
                                     {!question.isAnswered && (
-                                        <button
+                                        <ButtonIcon
+                                            as={motion.button}
+                                            whileHover={{ scale: 1.1 }}
+                                            whileTap={{ scale: 0.9 }}
                                             className={`like-button ${
                                                 question.likeId ? 'liked' : ''
                                             }`}
@@ -182,7 +187,7 @@ export const Room = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                        </button>
+                                        </ButtonIcon>
                                     )}
                                 </Questions>
                             );

@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
+import { motion } from 'framer-motion';
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { LogoIcon } from '../components/LogoIcon';
@@ -9,7 +10,7 @@ import { database } from '../services/firebase';
 
 import illustrationImg from '../assets/images/illustration.svg';
 
-import { AuthStyle } from '../assets/styles/auth.styles';
+import { Aside, AuthStyle, Main } from '../assets/styles/auth.styles';
 
 export const NewRoom = () => {
     const { user } = useAuth();
@@ -36,15 +37,15 @@ export const NewRoom = () => {
 
     return (
         <AuthStyle>
-            <aside>
+            <Aside>
                 <img
                     src={illustrationImg}
                     alt="Ilustração simbolizando perguntas e respostas"
                 />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
                 <p>Tire as dúvidas da sua audiência em tempo real</p>
-            </aside>
-            <main>
+            </Aside>
+            <Main>
                 <div className="main-content">
                     <LogoIcon />
                     <div>
@@ -66,7 +67,7 @@ export const NewRoom = () => {
                         <Link to="/">Click aqui</Link>{' '}
                     </p>
                 </div>
-            </main>
+            </Main>
         </AuthStyle>
     );
 };

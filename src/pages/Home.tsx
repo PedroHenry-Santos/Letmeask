@@ -2,11 +2,17 @@ import { FormEvent, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import { ThemeContext } from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
-import { AuthStyle } from '../assets/styles/auth.styles';
+import {
+    AuthStyle,
+    Aside,
+    Main,
+    ButtonGoogle
+} from '../assets/styles/auth.styles';
 import { GoogleIcon } from '../components/GoogleIcon';
 import { LogoIcon } from '../components/LogoIcon';
 
@@ -77,15 +83,24 @@ export const Home = () => {
 
     return (
         <AuthStyle>
-            <aside>
+            <Aside>
                 <img
                     src={illustrationImg}
                     alt="Ilustração simbolizando perguntas e respostas"
                 />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
                 <p>Tire as dúvidas da sua audiência em tempo real</p>
-            </aside>
-            <main>
+            </Aside>
+            <Main
+                as={motion.section}
+                transition={{ delay: 0.5, duration: 2 }}
+                variants={{
+                    show: { opacity: 1, y: '0' },
+                    hidden: { opacity: 0, y: '50%' }
+                }}
+                initial="hidden"
+                animate="show"
+            >
                 <div className="main-content">
                     <LogoIcon />
                     <div>
@@ -93,14 +108,17 @@ export const Home = () => {
                         <SwitchTheme />
                     </div>
 
-                    <button
+                    <ButtonGoogle
+                        as={motion.button}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.9 }}
                         className="create-room"
                         type="button"
                         onClick={handleCreateRoom}
                     >
                         <GoogleIcon />
                         Crie sua sala com o Google
-                    </button>
+                    </ButtonGoogle>
 
                     <Toaster />
                     <div className="separator">ou entre em uma sala</div>
@@ -114,7 +132,7 @@ export const Home = () => {
                         <Button type="submit">Entrar na sala</Button>
                     </form>
                 </div>
-            </main>
+            </Main>
         </AuthStyle>
     );
 };
