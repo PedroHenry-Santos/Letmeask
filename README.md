@@ -8,7 +8,8 @@
 ![Badge](https://img.shields.io/badge/TYPESCRIPT-v4.2.4-blue?style=flat&color=298BF9&labelColor=000000&logo=TypeScript)
 ![Badge](https://img.shields.io/badge/REACT-v17.0.2-blue?style=flat&color=298BF9&labelColor=000000&logo=react)
 ![Badge](https://img.shields.io/badge/Firebase-v8.6.8-blue?style=flat&logo=Firebase&color=298BF9&labelColor=000000)
-![Badge](https://img.shields.io/badge/STYLED--COMPONENTS-v5.3.0-blue?style=flat&logo=styled-components&labelColor=000000&color=298BF9)
+![Badge](https://img.shields.io/badge/Styled--components-v5.3.0-blue?style=flat&logo=styled-components&labelColor=000000&color=298BF9)
+![Badge](https://img.shields.io/badge/Framer--motion-v4.1.17-blue?style=flat&logo=framer&labelColor=000000&color=298BF9)
 
 <div align="center">
   <img src=".github/demo.gif" with="800" height="400"/>
@@ -71,6 +72,8 @@ Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.
 - [x] Toast para notificação.
 - [x] Modal de confirmação para exclusão e encerramento da chamada.
 - [x] Temas de exibição (Light, Dark).
+- [x] Animações na tela inicial e em todos os botões da aplicação com o [framer-motion](https://www.framer.com/motion/).
+- [x] Mostrar se o usuário já esta autenticado na tela inicial e de criação de salas.
 - [ ] Responsividade.
 
 
