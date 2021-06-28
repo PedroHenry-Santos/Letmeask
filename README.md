@@ -78,6 +78,7 @@ Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.
 - [x] Direcionamento automático do administrador para a sala correspondente quando colocar o código na home. (:rocket: Milhas extras...)
 - [x] As perguntas mais bem votadas são colocadas em primeiro lugar. (:rocket: Milhas extras...)
 - [x] A pergunta respondida vai para à ultima posição. (:rocket: Milhas extras...)
+- [x] A pergunta destacada vai para à primeira posição. (:rocket: Milhas extras...)
 - [ ] Responsividade. (:rocket: Milhas extras...)
 
 ## :clock10: Histórico de atualizações

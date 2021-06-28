@@ -67,6 +67,7 @@ export const useRoom = (roomId: string) => {
             );
 
             parsedQuestions.sort((a, b) => {
+                if (a.isHighLighted && !a.isAnswered) return -1;
                 return b.likeCount - a.likeCount;
             });
 
