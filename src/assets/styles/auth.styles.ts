@@ -53,7 +53,6 @@ export const Content = styled.div`
         justify-content: center;
         align-items: center;
         margin-top: 2rem;
-        align-self: center;
 
         span {
             font-size: 0.9rem;
@@ -64,7 +63,7 @@ export const Content = styled.div`
 
     h2 {
         font-size: 1.6rem;
-        margin: 4.3rem 0 1.6rem;
+        margin: 0.9rem 0 1.6rem;
         font-family: 'Poppins', sans-serif;
     }
 
@@ -174,5 +173,29 @@ export const AuthStyle = styled.div`
             background: ${props => props.theme.colors.tertiaryText};
             margin-left: 1.1rem;
         }
+    }
+`;
+
+export const UserImage = styled.img`
+    width: 4.7rem;
+    border-radius: 50%;
+    margin-top: 2.5rem;
+`;
+
+export const CreateRoom = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4rem;
+    }
+
+    > div {
+        padding: 1rem 0;
+    }
+
+    button {
+        width: 100%;
     }
 `;

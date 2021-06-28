@@ -17,6 +17,7 @@ import { SwitchTheme } from '../components/SwithTheme';
 
 import Apresentation from '../assets/images/apresentation.svg';
 import { ButtonIcon } from '../components/Questions/styles';
+import { UserInfo } from '../components/UserInfor';
 
 interface RoomParams {
     id: string;
@@ -103,13 +104,16 @@ export const Room = () => {
 
             <main>
                 <div className="room-title">
-                    <div>
+                    <div className="info-questions">
                         <h1>Sala {title}</h1>
                         {questions.length > 0 && (
                             <span>{questions.length} pergunta(s)</span>
                         )}
                     </div>
-                    <SwitchTheme />
+                    <div className="theme-mode">
+                        <span>Trocar tema</span>
+                        <SwitchTheme />
+                    </div>
                 </div>
 
                 <form onSubmit={handleSendQuestion}>
@@ -120,10 +124,15 @@ export const Room = () => {
                     />
                     <div className="form-footer">
                         {user ? (
-                            <div className="user-info">
-                                <img src={user.avatar} alt={user.name} />
-                                <span>{user.name}</span>
-                            </div>
+                            <>
+                                <UserInfo
+                                    className="user-info"
+                                    author={{
+                                        name: user.name,
+                                        avatar: user.avatar
+                                    }}
+                                />
+                            </>
                         ) : (
                             <span>
                                 Para enviar uma pergunta,{' '}

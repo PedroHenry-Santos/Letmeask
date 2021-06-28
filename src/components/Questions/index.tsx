@@ -1,6 +1,8 @@
 import { HTMLMotionProps, motion } from 'framer-motion';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
+import { UserInfo } from '../UserInfor';
+
 import { QuestionStyle } from './styles';
 
 type QuestionsProps = HTMLMotionProps<'div'> &
@@ -38,10 +40,7 @@ export const Questions: React.FC<QuestionsProps> = ({
         >
             <p>{content}</p>
             <footer>
-                <div className="user-info">
-                    <img src={author.avatar} alt={author.name} />
-                    <span>{author.name}</span>
-                </div>
+                <UserInfo author={author} />
                 <div>{children}</div>
             </footer>
         </QuestionStyle>

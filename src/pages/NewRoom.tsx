@@ -10,7 +10,14 @@ import { database } from '../services/firebase';
 
 import illustrationImg from '../assets/images/illustration.svg';
 
-import { Aside, AuthStyle, Content, Main } from '../assets/styles/auth.styles';
+import {
+    Aside,
+    AuthStyle,
+    Content,
+    Main,
+    UserImage
+} from '../assets/styles/auth.styles';
+import { UserInfo } from '../components/UserInfor';
 
 export const NewRoom = () => {
     const { user } = useAuth();
@@ -52,6 +59,7 @@ export const NewRoom = () => {
                         <span>Trocar tema</span>
                         <SwitchTheme />
                     </div>
+                    {user && <UserImage src={user.avatar} alt={user.name} />}
                     <h2>Criar uma nova sala</h2>
                     <form onSubmit={handleCreateRoom}>
                         <input

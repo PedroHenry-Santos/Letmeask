@@ -12,13 +12,15 @@ import {
     Aside,
     Main,
     ButtonGoogle,
-    Content
+    Content,
+    CreateRoom
 } from '../assets/styles/auth.styles';
 import { GoogleIcon } from '../components/GoogleIcon';
 import { LogoIcon } from '../components/LogoIcon';
 
 import illustrationImg from '../assets/images/illustration.svg';
 import { SwitchTheme } from '../components/SwithTheme';
+import { UserInfo } from '../components/UserInfor';
 
 export const Home = () => {
     const history = useHistory();
@@ -127,17 +129,32 @@ export const Home = () => {
                         <SwitchTheme />
                     </div>
 
-                    <ButtonGoogle
-                        as={motion.button}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="create-room"
-                        type="button"
-                        onClick={handleCreateRoom}
-                    >
-                        <GoogleIcon />
-                        Crie sua sala com o Google
-                    </ButtonGoogle>
+                    {user ? (
+                        <CreateRoom>
+                            <h3>Bem vindo!</h3>
+                            <UserInfo
+                                author={{
+                                    name: user.name,
+                                    avatar: user.avatar
+                                }}
+                            />
+                            <Button type="button" onClick={handleCreateRoom}>
+                                Crie sua sala
+                            </Button>
+                        </CreateRoom>
+                    ) : (
+                        <ButtonGoogle
+                            as={motion.button}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="create-room"
+                            type="button"
+                            onClick={handleCreateRoom}
+                        >
+                            <GoogleIcon />
+                            Crie sua sala com o Google
+                        </ButtonGoogle>
+                    )}
 
                     <Toaster />
                     <div className="separator">ou entre em uma sala</div>

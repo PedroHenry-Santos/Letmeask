@@ -37,23 +37,6 @@ export const QuestionStyle = styled.div`
         align-items: center;
         margin-top: 1.6rem;
 
-        .user-info {
-            display: flex;
-            align-items: center;
-
-            img {
-                width: 2.2rem;
-                height: 2.2rem;
-                border-radius: 50%;
-            }
-
-            span {
-                margin-left: 0.6rem;
-                color: ${props => props.theme.colors.secondaryText};
-                font-size: 0.9rem;
-            }
-        }
-
         > div {
             display: flex;
             align-items: center;

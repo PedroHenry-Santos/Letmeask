@@ -164,13 +164,16 @@ export const AdminRoom = () => {
 
             <main>
                 <div className="room-title">
-                    <div>
+                    <div className="info-questions">
                         <h1>Sala {title}</h1>
                         {questions.length > 0 && (
                             <span>{questions.length} pergunta(s)</span>
                         )}
                     </div>
-                    <SwitchTheme />
+                    <div className="theme-mode">
+                        <span>Trocar tema</span>
+                        <SwitchTheme />
+                    </div>
                 </div>
 
                 <div className="question-list">

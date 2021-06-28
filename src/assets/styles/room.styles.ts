@@ -44,7 +44,7 @@ export const RoomStyle = styled.div`
             justify-content: space-between;
             align-items: center;
 
-            > div {
+            .info-questions {
                 display: flex;
                 align-items: center;
 
@@ -62,6 +62,18 @@ export const RoomStyle = styled.div`
                     color: ${props => props.theme.colors.whiteText};
                     font-weight: 500;
                     font-size: 0.9rem;
+                }
+            }
+
+            .theme-mode {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    padding: 0 1rem;
                 }
             }
         }
