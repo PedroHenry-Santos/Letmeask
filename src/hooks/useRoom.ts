@@ -43,36 +43,44 @@ export const useRoom = (roomId: string) => {
     useEffect(() => {
         const roomRef = database.ref(`rooms/${roomId}`);
 
-        roomRef.on('value', room => {
-            const databaseRoom = room.val();
-            const firebaseQuestion: FirebaseQuestions =
-                databaseRoom.questions ?? {};
+        roomRef
+            .child('questions')
+            .limitToFirst(20)
+            .on('value', room => {
+                const databaseRoom = room.val();
 
-            const parsedQuestions = Object.entries(firebaseQuestion).map(
-                ([key, value]) => {
-                    return {
-                        id: key,
-                        content: value.content,
-                        author: value.author,
-                        isHighLighted: value.isHighLighted,
-                        isAnswered: value.isAnswered,
-                        likeCount: !value.isAnswered
-                            ? Object.values(value.likes ?? {}).length
-                            : -1,
-                        likeId: Object.entries(value.likes ?? {}).find(
-                            ([keyLike, like]) => like.authorId === user?.id
-                        )?.[0]
-                    };
-                }
-            );
+                const firebaseQuestion: FirebaseQuestions = databaseRoom ?? {};
 
-            parsedQuestions.sort((a, b) => {
-                if (a.isHighLighted && !a.isAnswered) return -1;
-                return b.likeCount - a.likeCount;
+                const parsedQuestions = Object.entries(firebaseQuestion).map(
+                    ([key, value]) => {
+                        return {
+                            id: key,
+                            content: value.content,
+                            author: value.author,
+                            isHighLighted: value.isHighLighted,
+                            isAnswered: value.isAnswered,
+                            likeCount: !value.isAnswered
+                                ? Object.values(value.likes ?? {}).length
+                                : -1,
+                            likeId: Object.entries(value.likes ?? {}).find(
+                                ([keyLike, like]) => like.authorId === user?.id
+                            )?.[0]
+                        };
+                    }
+                );
+
+                parsedQuestions.sort((a, b) => {
+                    if (a.isHighLighted && !a.isAnswered) return -1;
+                    return b.likeCount - a.likeCount;
+                });
+
+                setQuestions(parsedQuestions);
             });
 
+        roomRef.on('value', room => {
+            const databaseRoom = room.val();
+
             setTitle(databaseRoom.title);
-            setQuestions(parsedQuestions);
         });
 
         return () => {
