@@ -11,7 +11,8 @@ import {
     AuthStyle,
     Aside,
     Main,
-    ButtonGoogle
+    ButtonGoogle,
+    Content
 } from '../assets/styles/auth.styles';
 import { GoogleIcon } from '../components/GoogleIcon';
 import { LogoIcon } from '../components/LogoIcon';
@@ -83,7 +84,16 @@ export const Home = () => {
 
     return (
         <AuthStyle>
-            <Aside>
+            <Aside
+                as={motion.aside}
+                transition={{ delay: 0, duration: 2.5 }}
+                variants={{
+                    show: { flex: 47, alignItems: 'none' },
+                    hidden: { flex: 100, alignItems: 'center' }
+                }}
+                initial="hidden"
+                animate="show"
+            >
                 <img
                     src={illustrationImg}
                     alt="Ilustração simbolizando perguntas e respostas"
@@ -92,16 +102,25 @@ export const Home = () => {
                 <p>Tire as dúvidas da sua audiência em tempo real</p>
             </Aside>
             <Main
-                as={motion.section}
-                transition={{ delay: 0.5, duration: 2 }}
+                as={motion.main}
+                transition={{ delay: 1.3, duration: 2.5 }}
                 variants={{
-                    show: { opacity: 1, y: '0' },
-                    hidden: { opacity: 0, y: '50%' }
+                    show: { flex: 53, padding: '0 2.2rem' },
+                    hidden: { flex: 0, padding: 0 }
                 }}
                 initial="hidden"
                 animate="show"
             >
-                <div className="main-content">
+                <Content
+                    as={motion.main}
+                    transition={{ delay: 2, duration: 2.5 }}
+                    variants={{
+                        show: { opacity: 1, display: 'flex' },
+                        hidden: { opacity: 0, display: 'none' }
+                    }}
+                    initial="hidden"
+                    animate="show"
+                >
                     <LogoIcon />
                     <div>
                         <span>Trocar tema</span>
@@ -131,7 +150,7 @@ export const Home = () => {
                         />
                         <Button type="submit">Entrar na sala</Button>
                     </form>
-                </div>
+                </Content>
             </Main>
         </AuthStyle>
     );

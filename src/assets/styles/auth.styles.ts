@@ -34,82 +34,80 @@ export const Main = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
+`;
 
-    .main-content {
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 21.4rem;
+    align-items: stretch;
+    text-align: center;
+
+    > img {
+        align-self: center;
+    }
+
+    > div {
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 21.4rem;
-        align-items: stretch;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        align-self: center;
 
-        > img {
-            align-self: center;
-        }
-
-        > div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 2rem;
-            align-self: center;
-
-            span {
-                font-size: 0.9rem;
-                font-weight: 500;
-                padding: 0 1rem;
-            }
-        }
-
-        h2 {
-            font-size: 1.6rem;
-            margin: 4.3rem 0 1.6rem;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        form {
-            input {
-                height: 3.4rem;
-                border-radius: 0.6rem;
-                padding: 0 1.1rem;
-                background: ${props =>
-                    props.theme.colors.interactionBackground};
-                border: 1px solid ${props => props.theme.colors.tertiaryText};
-                color: ${props => props.theme.colors.mainText};
-
-                &:focus {
-                    outline: none !important;
-                    border-color: ${props => props.theme.colors.primary};
-                    box-shadow: 0 0 0.33rem
-                        ${props => props.theme.colors.primary};
-                }
-            }
-
-            button {
-                margin-top: 1.1rem;
-
-                &:focus {
-                    outline: none !important;
-                    border-color: ${props => props.theme.colors.primary};
-                    box-shadow: 0 0 0.33rem
-                        ${props => props.theme.colors.mainButtonHover};
-                }
-            }
-
-            button,
-            input {
-                width: 100%;
-            }
-        }
-
-        p {
+        span {
             font-size: 0.9rem;
-            color: ${props => props.theme.colors.tertiaryText};
+            font-weight: 500;
+            padding: 0 1rem;
+        }
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        margin: 4.3rem 0 1.6rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    form {
+        input {
+            height: 3.4rem;
+            border-radius: 0.6rem;
+            padding: 0 1.1rem;
+            background: ${props => props.theme.colors.interactionBackground};
+            border: 1px solid ${props => props.theme.colors.tertiaryText};
+            color: ${props => props.theme.colors.mainText};
+
+            &:focus {
+                outline: none !important;
+                border-color: ${props => props.theme.colors.primary};
+                box-shadow: 0 0 0.33rem ${props => props.theme.colors.primary};
+            }
+        }
+
+        button {
             margin-top: 1.1rem;
 
-            a {
-                color: ${props => props.theme.colors.secondary};
+            &:focus {
+                outline: none !important;
+                border-color: ${props => props.theme.colors.primary};
+                box-shadow: 0 0 0.33rem
+                    ${props => props.theme.colors.mainButtonHover};
             }
+        }
+
+        button,
+        input {
+            width: 100%;
+        }
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: ${props => props.theme.colors.tertiaryText};
+        margin-top: 1.1rem;
+
+        a {
+            color: ${props => props.theme.colors.secondary};
         }
     }
 `;

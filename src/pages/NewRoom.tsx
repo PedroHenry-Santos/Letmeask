@@ -10,7 +10,7 @@ import { database } from '../services/firebase';
 
 import illustrationImg from '../assets/images/illustration.svg';
 
-import { Aside, AuthStyle, Main } from '../assets/styles/auth.styles';
+import { Aside, AuthStyle, Content, Main } from '../assets/styles/auth.styles';
 
 export const NewRoom = () => {
     const { user } = useAuth();
@@ -46,7 +46,7 @@ export const NewRoom = () => {
                 <p>Tire as dúvidas da sua audiência em tempo real</p>
             </Aside>
             <Main>
-                <div className="main-content">
+                <Content>
                     <LogoIcon />
                     <div>
                         <span>Trocar tema</span>
@@ -66,7 +66,7 @@ export const NewRoom = () => {
                         Quer entrar em uma sala existente?{' '}
                         <Link to="/">Click aqui</Link>{' '}
                     </p>
-                </div>
+                </Content>
             </Main>
         </AuthStyle>
     );
