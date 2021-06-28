@@ -64,6 +64,10 @@ export const useRoom = (roomId: string) => {
                 }
             );
 
+            parsedQuestions.sort((a, b) => {
+                return b.likeCount - a.likeCount;
+            });
+
             setTitle(databaseRoom.title);
             setQuestions(parsedQuestions);
         });

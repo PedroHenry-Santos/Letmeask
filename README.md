@@ -72,10 +72,11 @@ Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.
 - [x] Toast para notificação. (:rocket: Milhas extras...)
 - [x] Modal de confirmação para exclusão e encerramento da chamada. (:rocket: Milhas extras...)
 - [x] Temas de exibição (Light, Dark). (:rocket: Milhas extras...)
-- [x] Animações na tela inicial e em todos os botões da aplicação com o [framer-motion](https://www.framer.com/motion/) (:rocket: Milhas extras...)
+- [x] Animações na tela inicial e em todos os botões da aplicação com o [framer-motion](https://www.framer.com/motion/). (:rocket: Milhas extras...)
 - [x] Mostrar se o usuário já esta autenticado na tela inicial e de criação de salas. (:rocket: Milhas extras...)
 - [x] Funcionalidade de fechamento automático da sala para todos os usuários quando a sala for encerrada. (:rocket: Milhas extras...)
-- [x] Direcionamento automático do administrador para a sala correspondente quando colocar o código na home.
+- [x] Direcionamento automático do administrador para a sala correspondente quando colocar o código na home. (:rocket: Milhas extras...)
+- [x] As perguntas mais bem votadas são colocadas em primeiro lugar. (:rocket: Milhas extras...)
 - [ ] Responsividade. (:rocket: Milhas extras...)
 
 ## :clock10: Histórico de atualizações
