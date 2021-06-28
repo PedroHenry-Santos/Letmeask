@@ -77,6 +77,7 @@ Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.
 - [x] Funcionalidade de fechamento automático da sala para todos os usuários quando a sala for encerrada. (:rocket: Milhas extras...)
 - [x] Direcionamento automático do administrador para a sala correspondente quando colocar o código na home. (:rocket: Milhas extras...)
 - [x] As perguntas mais bem votadas são colocadas em primeiro lugar. (:rocket: Milhas extras...)
+- [x] A pergunta respondida vai para à ultima posição. (:rocket: Milhas extras...)
 - [ ] Responsividade. (:rocket: Milhas extras...)
 
 ## :clock10: Histórico de atualizações
