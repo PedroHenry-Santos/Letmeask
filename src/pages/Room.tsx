@@ -1,39 +1,51 @@
-import { useState, FormEvent, useContext } from 'react';
+import { useState, FormEvent, useContext, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
 import { ThemeContext } from 'styled-components';
 import { motion } from 'framer-motion';
-import { RoomCode } from '../components/RunCode';
+
+import { RoomCode } from '../components/RoomCode';
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
-
-import { RoomStyle } from '../assets/styles/room.styles';
 import { Questions } from '../components/Questions';
 import { useRoom } from '../hooks/useRoom';
 import { LogoIcon } from '../components/LogoIcon';
 import { SwitchTheme } from '../components/SwithTheme';
-
-import Apresentation from '../assets/images/apresentation.svg';
 import { ButtonIcon } from '../components/Questions/styles';
 import { UserInfo } from '../components/UserInfor';
+import { useStateRoom } from '../hooks/useStateRoom';
+
+import Apresentation from '../assets/images/apresentation.svg';
+
+import { RoomStyle } from '../assets/styles/room.styles';
 
 interface RoomParams {
     id: string;
 }
 
 export const Room = () => {
-    const { user, signInWithGoogle } = useAuth();
     const params = useParams<RoomParams>();
     const roomId = params.id;
     const history = useHistory();
+
+    const state = useStateRoom(roomId);
+
+    useEffect(() => {
+        if (state) {
+            history.push(`/room/closed`);
+        }
+    }, [history, roomId, state]);
+
+    const { user, signInWithGoogle } = useAuth();
+
     const { questions, title } = useRoom(roomId);
     const { colors } = useContext(ThemeContext);
 
     const [newQuestion, setNewQuestion] = useState('');
 
-    const notify = () =>
+    const notifyUserNotConected = () =>
         toast.error('Você não está conectado em sum conta Google!.', {
             style: {
                 border: `1px solid ${colors.alert}`,
@@ -58,7 +70,7 @@ export const Room = () => {
         }
 
         if (!user) {
-            notify();
+            notifyUserNotConected();
         }
 
         const question = {

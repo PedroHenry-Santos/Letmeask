@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import Modal from 'react-modal';
 import { ThemeContext } from 'styled-components';
@@ -6,7 +6,7 @@ import { ThemeContext } from 'styled-components';
 import { motion } from 'framer-motion';
 import { Questions } from '../components/Questions';
 import { useRoom } from '../hooks/useRoom';
-import { RoomCode } from '../components/RunCode';
+import { RoomCode } from '../components/RoomCode';
 import { Button } from '../components/Button';
 import { database } from '../services/firebase';
 import { LogoIcon } from '../components/LogoIcon';
@@ -16,6 +16,7 @@ import Apresentation from '../assets/images/apresentation.svg';
 
 import { RoomStyle, ModalStyle } from '../assets/styles/room.styles';
 import { ButtonIcon } from '../components/Questions/styles';
+import { useStateRoom } from '../hooks/useStateRoom';
 
 interface RoomParams {
     id: string;
@@ -24,9 +25,17 @@ interface RoomParams {
 export const AdminRoom = () => {
     const params = useParams<RoomParams>();
     const roomId = params.id;
+    const history = useHistory();
+    const state = useStateRoom(roomId);
+
+    useEffect(() => {
+        if (state) {
+            history.push(`/room/closed`);
+        }
+    }, [history, roomId, state]);
+
     const { questions, title } = useRoom(roomId);
     const { colors } = useContext(ThemeContext);
-    const history = useHistory();
 
     const [modalIsOpenDeleteQuestion, setIsOpenDeleteQuestion] =
         useState(false);
@@ -73,7 +82,7 @@ export const AdminRoom = () => {
         });
 
         closeModalDeleteRoom();
-        history.push('/');
+        history.push('/room/closed');
     };
 
     const handleDeleteQuestion = async (questionId: string) => {

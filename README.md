@@ -74,6 +74,8 @@ Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.
 - [x] Temas de exibição (Light, Dark).
 - [x] Animações na tela inicial e em todos os botões da aplicação com o [framer-motion](https://www.framer.com/motion/).
 - [x] Mostrar se o usuário já esta autenticado na tela inicial e de criação de salas.
+- [x] Funcionalidade de fechamento automático da sala para todos os usuários quando a sala for encerrada.
+- [x] Direcionamento automático do administrador para a sala correspondente quando colocar o código na home.
 - [ ] Responsividade.
 
 

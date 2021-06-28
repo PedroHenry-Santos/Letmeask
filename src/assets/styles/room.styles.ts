@@ -152,8 +152,8 @@ export const RoomStyle = styled.div`
                 align-items: center;
 
                 img {
-                    width: 10rem;
-                    height: 10rem;
+                    width: 12rem;
+                    height: 12rem;
                 }
 
                 h3 {

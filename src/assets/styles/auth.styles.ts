@@ -7,6 +7,7 @@ export const Aside = styled.aside`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 8rem 5.4rem;
 
     img {
