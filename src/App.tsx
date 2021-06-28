@@ -2,12 +2,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import { AuthContextProvider } from './contexts/AuthContext';
+import { useTheme } from './hooks/useTheme';
 
 import { AdminRoom } from './pages/AdminRoom';
 import { Home } from './pages/Home';
 import { NewRoom } from './pages/NewRoom';
 import { Room } from './pages/Room';
-import { useTheme } from './hooks/useTheme';
+import { ClosedRoom } from './pages/ClosedRoom';
 
 import GlobalStyle from './assets/styles/global';
 
@@ -22,6 +23,11 @@ function App() {
                     <Switch>
                         <Route path="/" exact component={Home} />
                         <Route path="/room/new" component={NewRoom} />
+                        <Route
+                            path="/room/closed"
+                            exact
+                            component={ClosedRoom}
+                        />
                         <Route path="/room/:id" component={Room} />
                         <Route path="/admin/room/:id" component={AdminRoom} />
                     </Switch>
