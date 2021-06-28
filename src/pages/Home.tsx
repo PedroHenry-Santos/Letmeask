@@ -7,6 +7,13 @@ import { motion } from 'framer-motion';
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
+import { GoogleIcon } from '../components/GoogleIcon';
+import { LogoIcon } from '../components/LogoIcon';
+import { SwitchTheme } from '../components/SwithTheme';
+import { UserInfo } from '../components/UserInfor';
+
+import illustrationImg from '../assets/images/illustration.svg';
+
 import {
     AuthStyle,
     Aside,
@@ -15,12 +22,6 @@ import {
     Content,
     CreateRoom
 } from '../assets/styles/auth.styles';
-import { GoogleIcon } from '../components/GoogleIcon';
-import { LogoIcon } from '../components/LogoIcon';
-
-import illustrationImg from '../assets/images/illustration.svg';
-import { SwitchTheme } from '../components/SwithTheme';
-import { UserInfo } from '../components/UserInfor';
 
 export const Home = () => {
     const history = useHistory();
@@ -28,6 +29,7 @@ export const Home = () => {
     const { colors } = useContext(ThemeContext);
 
     const [roomCode, setRoomCode] = useState('');
+    const [isAuthor, serIsAuthor] = useState(false);
 
     const notifyRoomNotExist = () =>
         toast.error('Não existe a sala informada!', {
@@ -81,7 +83,15 @@ export const Home = () => {
             return;
         }
 
-        history.push(`room/${roomCode}`);
+        const roomDirectRef = await database.ref(`rooms/${roomCode}/authorId`);
+
+        roomDirectRef.once('value', room => {
+            if (user?.id === room.val()) {
+                history.push(`admin/room/${roomCode}`);
+            } else {
+                history.push(`room/${roomCode}`);
+            }
+        });
     };
 
     return (
