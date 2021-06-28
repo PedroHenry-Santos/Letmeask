@@ -63,7 +63,7 @@ export const useRoom = (roomId: string) => {
                                 ? Object.values(value.likes ?? {}).length
                                 : -1,
                             likeId: Object.entries(value.likes ?? {}).find(
-                                ([keyLike, like]) => like.authorId === user?.id
+                                ([, like]) => like.authorId === user?.id
                             )?.[0]
                         };
                     }

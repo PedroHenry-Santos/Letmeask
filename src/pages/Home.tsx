@@ -29,7 +29,6 @@ export const Home = () => {
     const { colors } = useContext(ThemeContext);
 
     const [roomCode, setRoomCode] = useState('');
-    const [isAuthor, serIsAuthor] = useState(false);
 
     const notifyRoomNotExist = () =>
         toast.error('Não existe a sala informada!', {

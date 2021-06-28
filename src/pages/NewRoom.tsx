@@ -1,7 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import { motion } from 'framer-motion';
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { LogoIcon } from '../components/LogoIcon';
@@ -17,7 +16,6 @@ import {
     Main,
     UserImage
 } from '../assets/styles/auth.styles';
-import { UserInfo } from '../components/UserInfor';
 
 export const NewRoom = () => {
     const { user } = useAuth();

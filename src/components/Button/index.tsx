@@ -1,4 +1,4 @@
-import { ForwardRefComponent, HTMLMotionProps, motion } from 'framer-motion';
+import { HTMLMotionProps, motion } from 'framer-motion';
 import { ButtonHTMLAttributes } from 'react';
 
 import { ButtonStyle } from './styles';
