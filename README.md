@@ -59,25 +59,24 @@ Para isso basta seguir o [roteiro](https://github.com/PedroHenry-Santos/Letmeask
 
 Para um acompanhamento mais atualizado verifique a aba [Projeto](https://github.com/PedroHenry-Santos/Letmeask/projects/1).
 
-- [x] Autenticação através de conta Google utilizando o Firebase.
-- [x] Criar sala de perguntas individuais.
-- [x] Adicionar novas perguntas na sala.
-- [x] Pagina do administrador das perguntas.
-- [x] Like nas perguntas.
-- [x] Remover perguntas.
-- [x] Encerrar sala.
-- [x] Impedir que entre em uma sala fechada.
-- [x] Função de dar destaque a uma pergunta.
-- [x] Função de marcar pergunta respondida.
-- [x] Toast para notificação.
-- [x] Modal de confirmação para exclusão e encerramento da chamada.
-- [x] Temas de exibição (Light, Dark).
-- [x] Animações na tela inicial e em todos os botões da aplicação com o [framer-motion](https://www.framer.com/motion/).
-- [x] Mostrar se o usuário já esta autenticado na tela inicial e de criação de salas.
-- [x] Funcionalidade de fechamento automático da sala para todos os usuários quando a sala for encerrada.
+- [x] Autenticação através de conta Google utilizando o Firebase. (:memo: Realizado durante o evento)
+- [x] Criar sala de perguntas individuais. (:memo: Realizado durante o evento)
+- [x] Adicionar novas perguntas na sala. (:memo: Realizado durante o evento)
+- [x] Pagina do administrador das perguntas. (:memo: Realizado durante o eventos)
+- [x] Like nas perguntas. (:memo: Realizado durante o evento)
+- [x] Remover perguntas. (:memo: Realizado durante o evento)
+- [x] Encerrar sala. (:memo: Realizado durante o evento)
+- [x] Impedir que entre em uma sala fechada com código. (:memo: Realizado durante o evento)
+- [x] Função de dar destaque a uma pergunta. (:memo: Realizado durante o evento)
+- [x] Função de marcar pergunta respondida. (:memo: Realizado durante o evento)
+- [x] Toast para notificação. (:rocket: Milhas extras...)
+- [x] Modal de confirmação para exclusão e encerramento da chamada. (:rocket: Milhas extras...)
+- [x] Temas de exibição (Light, Dark). (:rocket: Milhas extras...)
+- [x] Animações na tela inicial e em todos os botões da aplicação com o [framer-motion](https://www.framer.com/motion/) (:rocket: Milhas extras...)
+- [x] Mostrar se o usuário já esta autenticado na tela inicial e de criação de salas. (:rocket: Milhas extras...)
+- [x] Funcionalidade de fechamento automático da sala para todos os usuários quando a sala for encerrada. (:rocket: Milhas extras...)
 - [x] Direcionamento automático do administrador para a sala correspondente quando colocar o código na home.
-- [ ] Responsividade.
-
+- [ ] Responsividade. (:rocket: Milhas extras...)
 
 ## :clock10: Histórico de atualizações
 

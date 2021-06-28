@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/PedroHenry-Santos/Letmeask/compare/v1.3.0...v1.4.0) (2021-06-28)
+
+
+### Features
+
+* **closepage:** add redirect page when room is closed and refactor images ([034cd0b](https://github.com/PedroHenry-Santos/Letmeask/commit/034cd0bc755df22994f4f0b94274bdc6da321a55))
+* **home:** add automatic redirection of users according to their permission ([35a0374](https://github.com/PedroHenry-Santos/Letmeask/commit/35a0374555d837195d10282fd6f6875ea00ba47e))
+* **room/adminroom:** feat to check if the room is active and close the room to all users realtime ([0877c54](https://github.com/PedroHenry-Santos/Letmeask/commit/0877c547a5c3fed5f0c8e5f56431e51b5cf6c842))
+
 # [1.3.0](https://github.com/PedroHenry-Santos/Letmeask/compare/v1.2.0...v1.3.0) (2021-06-28)
 
 
