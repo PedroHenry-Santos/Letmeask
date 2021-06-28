@@ -1,4 +1,12 @@
-# [1.2.0](https://github.com/PedroHenry-Santos/Letmeask/compare/v1.0.0...v1.1.0) (2021-06-27)
+# [1.3.0](https://github.com/PedroHenry-Santos/Letmeask/compare/v1.2.0...v1.3.0) (2021-06-28)
+
+
+### Features
+
+* **home/newroom:** add component shows the logged in user, changing the interface to user ([7bdbdd1](https://github.com/PedroHenry-Santos/Letmeask/commit/7bdbdd14185ff6338be79749dba48ffdca58f1b4))
+* **motion:** add animation to components with framer-motion for more interactivity ([04d77f4](https://github.com/PedroHenry-Santos/Letmeask/commit/04d77f4d2496c5320e2e67eafe590e4bb810ff83))
+
+# [1.2.0](https://github.com/PedroHenry-Santos/Letmeask/compare/v1.1.0...v1.2.0) (2021-06-27)
 
 
 ### Bug Fixes
