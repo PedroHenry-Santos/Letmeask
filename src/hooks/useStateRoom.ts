@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { database } from '../services/firebase';
 
 export const useStateRoom = (roomId: string) => {
-    const [state, setState] = useState(false);
+    const [state, setState] = useState<boolean>(false);
 
     useEffect(() => {
         const roomRef = database.ref(`rooms/${roomId}`);
@@ -21,7 +21,7 @@ export const useStateRoom = (roomId: string) => {
         return () => {
             roomRef.off('value');
         };
-    }, [roomId, state]);
+    }, [[], roomId, state]);
 
     return state;
 };

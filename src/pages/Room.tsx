@@ -35,7 +35,7 @@ export const Room = () => {
         if (state) {
             history.push(`/room/closed`);
         }
-    }, [history, roomId, state]);
+    }, [[], history, roomId, state]);
 
     const { user, signInWithGoogle } = useAuth();
 
