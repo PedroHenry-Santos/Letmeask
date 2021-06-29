@@ -5,12 +5,19 @@ export const QuestionStyle = styled.div`
     border-radius: 0.6rem;
     box-shadow: 0 0.2px 0.8rem rgba(0, 0, 0, 0.04);
     padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
     & + .question {
         margin-top: 0.6rem;
     }
 
     p {
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: keep-all;
+        text-align: justify;
         color: ${props => props.theme.colors.mainText};
     }
 

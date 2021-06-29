@@ -1,7 +1,6 @@
 import { useState, FormEvent, useContext, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
-
 import { ThemeContext } from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -159,7 +158,9 @@ export const Room = () => {
                         </Button>
                     </div>
                 </form>
+
                 <Toaster />
+
                 <div className="question-list">
                     {questions.length > 0 ? (
                         questions.map(question => {

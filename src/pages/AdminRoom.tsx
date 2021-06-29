@@ -14,7 +14,7 @@ import { SwitchTheme } from '../components/SwithTheme';
 
 import Apresentation from '../assets/images/apresentation.svg';
 
-import { RoomStyle, ModalStyle } from '../assets/styles/room.styles';
+import { RoomStyle, ModalStyle } from '../assets/styles/adminRoom.styles';
 import { ButtonIcon } from '../components/Questions/styles';
 import { useStateRoom } from '../hooks/useStateRoom';
 

@@ -54,7 +54,7 @@ export const RoomStyle = styled.div`
         padding: 0 1.6rem;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 17% 31% 52%;
+        grid-template-rows: 17% 83%;
         margin: 0 auto;
         height: 100%;
         width: 100%;
@@ -96,89 +96,6 @@ export const RoomStyle = styled.div`
                     font-size: 0.9rem;
                     font-weight: 500;
                     padding: 0 1rem;
-                }
-            }
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-
-            textarea {
-                width: 100%;
-                height: 100%;
-                min-width: 8.7rem;
-                height: 8.7rem;
-                resize: none;
-                border: 0;
-                padding: 1.1rem 1.1rem;
-                border-radius: 0.6rem;
-                background: ${props =>
-                    props.theme.colors.interactionBackground};
-                box-shadow: 0 2px 0.8rem rgba(0, 0, 0, 0.04);
-
-                color: ${props => props.theme.colors.mainText};
-
-                &:focus {
-                    outline: none !important;
-                    border-color: ${props => props.theme.colors.primary};
-                    box-shadow: 0 0 0.33rem
-                        ${props => props.theme.colors.primary};
-                }
-
-                &::-webkit-scrollbar {
-                    width: 0.5rem;
-                    background-color: ${props =>
-                        props.theme.colors.interactionBackground};
-                }
-
-                &::-webkit-scrollbar-thumb {
-                    border-radius: 9999px;
-                    width: 0.4rem !important;
-                    background: red;
-                    background-color: ${props =>
-                        props.theme.colors.backgroundAnsweredQuestion};
-                }
-            }
-
-            .form-footer {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 1rem;
-
-                .user-info {
-                    display: flex;
-                    align-items: center;
-
-                    img {
-                        width: 2.2rem;
-                        height: 2.2rem;
-                        border-radius: 50%;
-                    }
-
-                    span {
-                        margin-left: 0.6rem;
-                        color: ${props => props.theme.colors.mainText};
-                        font-weight: 500;
-                        font-size: 0.9rem;
-                    }
-                }
-
-                > span {
-                    font-size: 0.9rem;
-                    color: ${props => props.theme.colors.secondaryText};
-                    font-weight: 500;
-
-                    button {
-                        background: transparent;
-                        border: 0;
-                        color: ${props => props.theme.colors.primary};
-                        text-decoration: underline;
-                        font-size: 0.9rem;
-                        font-weight: 500;
-                        cursor: pointer;
-                    }
                 }
             }
         }
