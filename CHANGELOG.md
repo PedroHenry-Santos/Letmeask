@@ -1,3 +1,20 @@
+# [1.5.0](https://github.com/PedroHenry-Santos/Letmeask/compare/v1.4.0...v1.5.0) (2021-06-30)
+
+
+### Bug Fixes
+
+* **room:** fix production bug, where it does not close the room in some cases ([93aae32](https://github.com/PedroHenry-Santos/Letmeask/commit/93aae32a4d9158f8100a7651e97da9f7a42dd7f8))
+* **room/adminroom:** fix bug in the styling of room components ([535a9be](https://github.com/PedroHenry-Santos/Letmeask/commit/535a9be300fecc98fadccf15fbc795bb645f7674))
+
+
+### Features
+
+* **responsivo:** add responsive to all pages and components ([6b2dafd](https://github.com/PedroHenry-Santos/Letmeask/commit/6b2dafd78a09919d5e71768a7adf910c7875609d))
+* **room/adminroom:** add answered questions as last positions ([fec833d](https://github.com/PedroHenry-Santos/Letmeask/commit/fec833d703f3067e4a96330d998559c97bbad6cf))
+* **room/adminroom:** add limit of questions to be displayed on screen ([04c48ae](https://github.com/PedroHenry-Santos/Letmeask/commit/04c48ae8cf1a4c3e99788c93a282c51e7b780bcf))
+* **room/adminroom:** add sorting of questions by likes in real time ([d8cfc95](https://github.com/PedroHenry-Santos/Letmeask/commit/d8cfc95052afab8a92ad6a06266205bcfb7f84a2))
+* **room/adminroom:** add the highlighted questions as the first ([98994cc](https://github.com/PedroHenry-Santos/Letmeask/commit/98994ccd8bd68a8ed4bb57f87126c6a8131bccee))
+
 # [1.4.0](https://github.com/PedroHenry-Santos/Letmeask/compare/v1.3.0...v1.4.0) (2021-06-28)
 
 
