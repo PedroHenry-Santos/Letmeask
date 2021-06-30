@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Aside = styled.aside`
-    flex: 47;
+    flex: 0;
     background: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.whiteText};
     display: flex;
@@ -10,31 +10,57 @@ export const Aside = styled.aside`
     align-items: center;
     padding: 8rem 5.4rem;
 
+    @media (min-width: 720px) {
+        flex: 47;
+    }
+`;
+
+export const ContentAside = styled.div`
+    max-width: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     img {
-        max-width: 21.4rem;
+        max-width: 16rem;
     }
 
     strong {
         font: 700 2.4rem 'Poppins', sans-serif;
         line-height: 2.8rem;
         margin-top: 1.1rem;
+        text-align: center;
     }
 
     p {
         font-size: 1.6rem;
         line-height: 2.1rem;
         margin-top: 1.1rem;
+        text-align: center;
         color: ${props => props.theme.colors.whiteText};
+    }
+
+    @media (min-width: 800px) {
+        max-width: 36rem;
+
+        img {
+            max-width: 21.4rem;
+        }
     }
 `;
 
 export const Main = styled.main`
-    flex: 53;
+    flex: 100;
     flex-direction: column;
     padding: 0 2.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 720px) {
+        flex: 53;
+    }
 `;
 
 export const Content = styled.div`

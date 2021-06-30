@@ -1,4 +1,6 @@
 import { HTMLAttributes } from 'react';
+import MediaQuery from 'react-responsive';
+
 import { UserInfoStyle } from './styles';
 
 interface UserInfoProps extends HTMLAttributes<HTMLDivElement> {
@@ -12,7 +14,9 @@ export const UserInfo: React.FC<UserInfoProps> = ({ author, ...props }) => {
     return (
         <UserInfoStyle {...props}>
             <img src={author.avatar} alt={author.name} />
-            <span>{author.name}</span>
+            <MediaQuery minWidth="320px">
+                <span>{author.name}</span>
+            </MediaQuery>
         </UserInfoStyle>
     );
 };

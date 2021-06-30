@@ -5,6 +5,7 @@ export const RoomStyle = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 11vh 89vh;
     height: 100vh;
+    width: 100vw;
 
     header {
         grid-area: 'header';
@@ -34,6 +35,18 @@ export const RoomStyle = styled.div`
                 }
             }
 
+            .theme-mode {
+                margin: auto 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.4rem;
+
+                span {
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                }
+            }
+
             > div {
                 display: flex;
                 gap: 1.1rem;
@@ -51,51 +64,96 @@ export const RoomStyle = styled.div`
     }
 
     main {
-        padding: 0 1.6rem;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 17% 83%;
+        grid-template-rows: 22% 78%;
         margin: 0 auto;
+        padding: 0 2rem;
         height: 100%;
         width: 100%;
         max-width: 53.4rem;
 
+        @media (min-width: 500px) {
+            grid-template-rows: 24% 76%;
+        }
+
+        @media (min-width: 600) {
+            grid-template-rows: 26% 74%;
+        }
+
+        @media (min-width: 800) {
+            grid-template-rows: 28% 72%;
+        }
+
         .room-title {
             display: flex;
-            justify-content: space-between;
             align-items: flex-end;
             margin-bottom: 1.7rem;
 
+            @media (min-width: 800px) {
+                justify-content: space-between;
+            }
+
             .info-questions {
                 display: flex;
-                align-items: center;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                height: 100%;
 
                 h1 {
+                    display: flex;
+                    margin-top: auto;
+                    max-width: calc(100vw - 5rem);
                     font-family: 'Poppins', sans-serif;
-                    font-size: 1.6rem;
-                    ${props => props.theme.colors.mainText};
+                    font-size: 1.2rem;
+                    color: ${props => props.theme.colors.mainText};
+                    overflow-x: hidden;
+                    text-overflow: ellipsis;
+
+                    @media (min-width: 800px) {
+                        font-size: 1.6rem;
+                    }
                 }
 
-                span {
-                    margin-left: 1.1rem;
+                @media (min-width: 600px) {
+                    display: flex;
+                    align-items: flex-end;
+                    flex-direction: initial;
+
+                    h1 {
+                        max-width: 30rem;
+                        white-space: normal;
+                        word-wrap: break-word;
+                        word-break: keep-all;
+                        text-align: justify;
+                    }
+                }
+
+                > span {
                     background: ${props => props.theme.colors.secondary};
                     border-radius: 9999px;
                     padding: 0.6rem 1.1rem;
                     color: ${props => props.theme.colors.whiteText};
                     font-weight: 500;
                     font-size: 0.9rem;
+                    margin-top: 0.6rem;
+
+                    @media (min-width: 600px) {
+                        margin-left: 1.1rem;
+                    }
                 }
             }
 
             .theme-mode {
+                margin: auto 0;
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                flex-direction: column;
+                gap: 0.4rem;
 
                 span {
                     font-size: 0.9rem;
                     font-weight: 500;
-                    padding: 0 1rem;
                 }
             }
         }

@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const ClosedStyles = styled.div`
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     header {
         padding: 3rem 0;
 

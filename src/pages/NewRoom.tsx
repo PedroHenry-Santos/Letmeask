@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
 
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
@@ -13,6 +14,7 @@ import {
     Aside,
     AuthStyle,
     Content,
+    ContentAside,
     Main,
     UserImage
 } from '../assets/styles/auth.styles';
@@ -42,14 +44,19 @@ export const NewRoom = () => {
 
     return (
         <AuthStyle>
-            <Aside>
-                <img
-                    src={illustrationImg}
-                    alt="Ilustração simbolizando perguntas e respostas"
-                />
-                <strong>Crie salas de Q&amp;A ao-vivo</strong>
-                <p>Tire as dúvidas da sua audiência em tempo real</p>
-            </Aside>
+            <MediaQuery minWidth={720}>
+                <Aside>
+                    <ContentAside>
+                        <img
+                            src={illustrationImg}
+                            alt="Ilustração simbolizando perguntas e respostas"
+                        />
+                        <strong>Crie salas de Q&amp;A ao-vivo</strong>
+                        <p>Tire as dúvidas da sua audiência em tempo real</p>
+                    </ContentAside>
+                </Aside>
+            </MediaQuery>
+
             <Main>
                 <Content>
                     <LogoIcon />

@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import { ThemeContext } from 'styled-components';
 import { motion } from 'framer-motion';
+import MediaQuery from 'react-responsive';
 
 import { RoomCode } from '../components/RoomCode';
 import { Button } from '../components/Button';
@@ -109,6 +110,12 @@ export const Room = () => {
             <header>
                 <div className="content">
                     <LogoIcon />
+                    <MediaQuery maxWidth="699px" minWidth="300px">
+                        <div className="theme-mode">
+                            <span>Trocar tema</span>
+                            <SwitchTheme />
+                        </div>
+                    </MediaQuery>
                     <RoomCode code={roomId} />
                 </div>
             </header>
@@ -116,15 +123,17 @@ export const Room = () => {
             <main>
                 <div className="room-title">
                     <div className="info-questions">
-                        <h1>Sala {title}</h1>
+                        <h1>Sala - {title}</h1>
                         {questions.length > 0 && (
                             <span>{questions.length} pergunta(s)</span>
                         )}
                     </div>
-                    <div className="theme-mode">
-                        <span>Trocar tema</span>
-                        <SwitchTheme />
-                    </div>
+                    <MediaQuery minWidth="700px">
+                        <div className="theme-mode">
+                            <span>Trocar tema</span>
+                            <SwitchTheme />
+                        </div>
+                    </MediaQuery>
                 </div>
 
                 <form onSubmit={handleSendQuestion}>

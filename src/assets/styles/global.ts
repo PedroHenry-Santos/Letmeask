@@ -7,23 +7,23 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
 
-    @media (max-width: 1080px) {
+    @media (min-width: 800px) {
         html {
             font-size: 93.75%;
         }
     }
 
-    @media (max-width: 720px) {
+    @media (min-width: 500px) {
         html {
-            font-size: 85.5%;
+            font-size: 75.5%;
         }
     }
 
-    @media (max-width: 480px) {
-        html {
-            font-size: 75%;
-        }
+
+    html {
+        font-size: 75%;
     }
+
 
     body {
         background: ${props => props.theme.colors.background};
