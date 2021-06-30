@@ -2,14 +2,22 @@
   <img alt="podcastr" title="podcastr" src=".github/Logo.png" />
 </h1>
 
+<div align="center">
 
-
+![Website](https://img.shields.io/website?style=flat&up_message=online&labelColor=000000&url=https%3A%2F%2Fletmeask-9b20f.web.app%2F)
 ![Badge](https://img.shields.io/github/license/PedroHenry-Santos/Letmeask?style=flat&label=LICENSE&color=FFC300&labelColor=000000)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/PedroHenry-Santos/letmeask?style=flat&labelColor=000000&color=FFC300)
+![GitHub last commit](https://img.shields.io/github/last-commit/PedroHenry-Santos/letmeask?color=FFC300&style=flat&labelColor=000000)
+![GitHub repo size](https://img.shields.io/github/repo-size/Pedrohenry-Santos/letmeask?color=FFC300&labelColor=000000)
+
+
 ![Badge](https://img.shields.io/badge/TYPESCRIPT-v4.2.4-blue?style=flat&color=298BF9&labelColor=000000&logo=TypeScript)
 ![Badge](https://img.shields.io/badge/REACT-v17.0.2-blue?style=flat&color=298BF9&labelColor=000000&logo=react)
 ![Badge](https://img.shields.io/badge/Firebase-v8.6.8-blue?style=flat&logo=Firebase&color=298BF9&labelColor=000000)
 ![Badge](https://img.shields.io/badge/Styled--components-v5.3.0-blue?style=flat&logo=styled-components&labelColor=000000&color=298BF9)
 ![Badge](https://img.shields.io/badge/Framer--motion-v4.1.17-blue?style=flat&logo=framer&labelColor=000000&color=298BF9)
+
+</div>
 
 <div align="center">
   <img src=".github/demo.gif" with="800" height="400"/>
