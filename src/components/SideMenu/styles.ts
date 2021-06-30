@@ -17,13 +17,13 @@ export const Menu = styled.div.attrs((props: NavProps) => ({
     @keyframes open {
         from {
             background: ${props => props.theme.colors.primary};
-            clip-path: circle(2rem at calc(100% - 3.6rem) calc(2rem + 6.735px));
+            clip-path: circle(2rem at calc(100% - 3.6rem) calc(2rem + 1rem));
         }
         to {
             background-color: ${props =>
                 props.theme.colors.backgroundAnsweredQuestion};
             clip-path: circle(
-                calc(40vh + 600px) at calc(100% - 2.4rem) calc(2rem + 6.735px)
+                calc(40vh + 600px) at calc(100% - 3.6rem) calc(2rem + 1rem)
             );
         }
     }
@@ -33,25 +33,26 @@ export const Menu = styled.div.attrs((props: NavProps) => ({
             background: ${props =>
                 props.theme.colors.backgroundAnsweredQuestion};
             clip-path: circle(
-                calc(40vh + 600px) at calc(100% - 3.6rem) calc(2rem + 6.735px)
+                calc(40vh + 600px) at calc(100% - 3.6rem) calc(2rem + 1rem)
             );
         }
         to {
             background: ${props => props.theme.colors.primary};
-            clip-path: circle(2rem at calc(100% - 3.6rem) calc(2rem + 6.735px));
+            clip-path: circle(2rem at calc(100% - 3.6rem) calc(2rem + 1rem));
         }
     }
 
     > div {
-        border-radius: 0 0 0.6rem 0.6rem;
+        z-index: 1;
+        border-radius: 0 0 2rem 2rem;
         background: ${props =>
             props.isOpen
                 ? props.theme.colors.backgroundAnsweredQuestion
                 : props.theme.colors.primary};
         clip-path: ${props =>
             props.isOpen
-                ? 'circle(100vw at calc(100% - 100px) calc(2rem + 6.735px))'
-                : 'circle(2rem at calc(100% - 3.6rem) calc(2rem + 6.735px))'};
+                ? ''
+                : 'circle(2rem at calc(100% - 3.6rem) calc(2rem + 1rem))'};
         animation-name: ${props => (props.isOpen ? 'open' : 'closed')};
         animation-duration: 1s;
         position: absolute;
@@ -62,6 +63,8 @@ export const Menu = styled.div.attrs((props: NavProps) => ({
     }
 
     ul {
+        z-index: 2;
+        border-radius: 0 0 0.8rem 0.8rem;
         width: calc(100vw - 6.4rem);
         height: 100%;
         padding: 2rem 0 2rem 2rem;

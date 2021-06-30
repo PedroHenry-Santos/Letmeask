@@ -6,6 +6,7 @@ export const RoomStyle = styled.div`
     grid-template-rows: 11vh 89vh;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 
     header {
         grid-area: 'header';

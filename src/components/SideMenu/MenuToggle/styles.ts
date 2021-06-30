@@ -10,10 +10,7 @@ export const MenuToggleStyle = styled.button.attrs(
     })
 )`
     display: flex;
-    position: ${props => (props.isOpen ? 'absolute' : 'relative')};
-    top: ${props => (props.isOpen ? '6.735px' : '0')};
-    right: ${props => (props.isOpen ? '1.6rem' : '0')};
-    z-index: 1;
+    z-index: 2;
     outline: none;
     border: none;
     cursor: pointer;

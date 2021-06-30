@@ -3,11 +3,14 @@ import styled from 'styled-components';
 export const RoomStyle = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 11vh 89vh;
+    grid-template-rows: 5.2rem 1fr;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 
     header {
+        width: 100vw;
+        height: 5.2rem;
         grid-area: 'header';
         padding: 0 1.6rem;
         border-bottom: 1px solid
