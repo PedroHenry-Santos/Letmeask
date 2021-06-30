@@ -5,7 +5,7 @@ import { Button } from '../components/Button';
 
 import Apresentation from '../assets/images/close.svg';
 
-import { ClosedStyles } from '../assets/styles/closed.styles';
+import { ClosedStyles } from '../assets/styles/landing.styles';
 
 export const ClosedRoom = () => {
     const history = useHistory();

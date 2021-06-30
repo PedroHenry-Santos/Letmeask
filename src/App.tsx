@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import { AuthContextProvider } from './contexts/AuthContext';
+import { AuthContextProvider } from './contexts/auth.context';
 import { useTheme } from './hooks/useTheme';
 
-import { AdminRoom } from './pages/AdminRoom';
-import { Home } from './pages/Home';
-import { NewRoom } from './pages/NewRoom';
-import { Room } from './pages/Room';
-import { ClosedRoom } from './pages/ClosedRoom';
+import { AdminRoom } from './pages/admin.room';
+import { Home } from './pages/auth.landing';
+import { NewRoom } from './pages/new.landing';
+import { Room } from './pages/user.room';
+import { ClosedRoom } from './pages/closed.landing';
 
 import GlobalStyle from './assets/styles/global';
 

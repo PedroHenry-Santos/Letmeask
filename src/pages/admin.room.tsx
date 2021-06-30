@@ -17,7 +17,16 @@ import { SideMenu } from '../components/SideMenu';
 
 import Apresentation from '../assets/images/apresentation.svg';
 
-import { RoomStyle, ModalStyle } from '../assets/styles/adminRoom.styles';
+import {
+    RoomStyle,
+    ModalStyle,
+    MainRoom,
+    RoomTitle,
+    Header,
+    QuestionList,
+    EmptyList,
+    MainAdminRoom
+} from '../assets/styles/room.styles';
 import { ButtonIcon } from '../components/Questions/styles';
 
 interface RoomParams {
@@ -106,7 +115,7 @@ export const AdminRoom = () => {
 
     return (
         <RoomStyle>
-            <header>
+            <Header>
                 <div className="content">
                     <LogoIcon />
                     <MediaQuery maxWidth="799px" minWidth="300px">
@@ -136,10 +145,10 @@ export const AdminRoom = () => {
                         </div>
                     </MediaQuery>
                 </div>
-            </header>
+            </Header>
 
-            <main>
-                <div className="room-title">
+            <MainAdminRoom>
+                <RoomTitle>
                     <div className="info-questions">
                         <h1>Sala - {title} </h1>
                         {questions.length > 0 && (
@@ -152,9 +161,9 @@ export const AdminRoom = () => {
                             <SwitchTheme />
                         </div>
                     </MediaQuery>
-                </div>
+                </RoomTitle>
 
-                <div className="question-list">
+                <QuestionList>
                     {questions.length > 0 ? (
                         questions.map(question => {
                             return (
@@ -333,7 +342,7 @@ export const AdminRoom = () => {
                             );
                         })
                     ) : (
-                        <div className="emptyContent">
+                        <EmptyList>
                             <img
                                 src={Apresentation}
                                 alt="Imagem de apresentação"
@@ -343,10 +352,10 @@ export const AdminRoom = () => {
                                 Envie o código desta sala para seus amigos e
                                 comece a responder perguntas!
                             </p>
-                        </div>
+                        </EmptyList>
                     )}
-                </div>
-            </main>
+                </QuestionList>
+            </MainAdminRoom>
 
             <Modal
                 isOpen={modalIsOpenDeleteRoom}

@@ -19,7 +19,15 @@ import { useStateRoom } from '../hooks/useStateRoom';
 
 import Apresentation from '../assets/images/apresentation.svg';
 
-import { RoomStyle } from '../assets/styles/room.styles';
+import {
+    EmptyList,
+    Form,
+    Header,
+    MainRoom,
+    QuestionList,
+    RoomStyle,
+    RoomTitle
+} from '../assets/styles/room.styles';
 
 interface RoomParams {
     id: string;
@@ -107,7 +115,7 @@ export const Room = () => {
 
     return (
         <RoomStyle>
-            <header>
+            <Header>
                 <div className="content">
                     <LogoIcon />
                     <MediaQuery maxWidth="699px" minWidth="300px">
@@ -118,10 +126,10 @@ export const Room = () => {
                     </MediaQuery>
                     <RoomCode code={roomId} />
                 </div>
-            </header>
+            </Header>
 
-            <main>
-                <div className="room-title">
+            <MainRoom>
+                <RoomTitle>
                     <div className="info-questions">
                         <h1>Sala - {title}</h1>
                         {questions.length > 0 && (
@@ -134,9 +142,9 @@ export const Room = () => {
                             <SwitchTheme />
                         </div>
                     </MediaQuery>
-                </div>
+                </RoomTitle>
 
-                <form onSubmit={handleSendQuestion}>
+                <Form onSubmit={handleSendQuestion}>
                     <textarea
                         placeholder="O que você quer perguntar?"
                         onChange={event => setNewQuestion(event.target.value)}
@@ -166,11 +174,11 @@ export const Room = () => {
                             Enviar pergunta
                         </Button>
                     </div>
-                </form>
+                </Form>
 
                 <Toaster />
 
-                <div className="question-list">
+                <QuestionList>
                     {questions.length > 0 ? (
                         questions.map(question => {
                             return (
@@ -224,7 +232,7 @@ export const Room = () => {
                             );
                         })
                     ) : (
-                        <div className="emptyContent">
+                        <EmptyList>
                             <img
                                 src={Apresentation}
                                 alt="Imagem de apresentação"
@@ -234,10 +242,10 @@ export const Room = () => {
                                 Envie o código desta sala para seus amigos e
                                 comece a responder perguntas!
                             </p>
-                        </div>
+                        </EmptyList>
                     )}
-                </div>
-            </main>
+                </QuestionList>
+            </MainRoom>
         </RoomStyle>
     );
 };

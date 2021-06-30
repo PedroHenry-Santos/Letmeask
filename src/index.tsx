@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-import { ThemeContextProvider } from './contexts/ThemeContext';
+import { ThemeContextProvider } from './contexts/theme.context';
 
 import './services/firebase';
 

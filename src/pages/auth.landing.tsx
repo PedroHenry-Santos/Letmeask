@@ -23,7 +23,7 @@ import {
     Content,
     CreateRoom,
     ContentAside
-} from '../assets/styles/auth.styles';
+} from '../assets/styles/landing.styles';
 
 export const Home = () => {
     const history = useHistory();

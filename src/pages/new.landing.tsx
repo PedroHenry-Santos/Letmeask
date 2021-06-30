@@ -17,7 +17,7 @@ import {
     ContentAside,
     Main,
     UserImage
-} from '../assets/styles/auth.styles';
+} from '../assets/styles/landing.styles';
 
 export const NewRoom = () => {
     const { user } = useAuth();
