@@ -19,18 +19,13 @@
 
 </div>
 
-<div align="center">
-  <img src=".github/demo.gif" with="800" height="400"/>
-</div>
-
 # :page_with_curl: Índice
 
 * [Sobre o projeto](#interrobang-sobre-o-projeto)
   - [Tecnologias utilizadas](#-tecnologias-utilizadas)
 * [Executando a aplicação](#rocket-executando-a-aplicação)
-  - [Executando a aplicação](#pencil2-Executando-a-aplicação)
 * [Para contribuir](#mailbox-para-contribuir)
-  - [Histórico de atualizações](#clock10-histórico-de-atualizações)
+* [Histórico de atualizações](#clock10-histórico-de-atualizações)
 
 # :interrobang: Sobre o projeto
 
